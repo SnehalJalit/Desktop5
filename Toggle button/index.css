@@ -1,0 +1,41 @@
+.switch-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+}
+
+.toggle-switch {
+    display: none;
+}
+
+.switch-label {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+.switch-label:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2.5px;
+    left: 2.5px;
+    transition: transform 0.3s;
+}
+
+.toggle-switch:checked + .switch-label {
+    background-color: #4CAF50;
+}
+
+.toggle-switch:checked + .switch-label:before {
+    transform: translateX(30px);
+}
